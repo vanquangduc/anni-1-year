@@ -1,0 +1,134 @@
+:root{
+    --first-color: #dbcbff;
+    --second-color: #ffb2d7;
+    --third-color: #fea0ff;
+    --fourth-color: #ff819f;
+    --fifth-color: #ff009e;
+}
+@font-face {
+    font-family: "primary-font";
+    src: url('./fonts/SVN-Intro\ Script\ Base.otf');
+}
+@font-face {
+    font-family: "secondary-font";
+    src: url('./fonts/iCiel_Borsok.otf');
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "primary-font";
+    background-color: #fff;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    overflow: hidden
+}
+
+#showcase{
+    background-image: url('./images/image/background1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#text {
+    margin: 0px 20px;
+    display: inline-block;
+	color: black;
+	letter-spacing: 2px;
+    font-size: 30px;
+    align-content: center;
+}
+
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: orange; 
+	}
+}
+
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(odd){
+
+    color: black
+}
+
+section:nth-child(even){
+    background-color: var(--first-color);
+    color: black
+}
+
+section .containter{
+    margin: 100px
+}
+
+section h2{
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 15px;
+}
+
+section .cards{
+    display: flex;
+}
+
+section .cards .text-card{
+    margin: 20px;
+    padding: 20px;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (max-width: 900px) {
+    a{
+        display: none;
+    }
+    body{
+        overflow: scroll;
+    }
+    section .cards{
+        flex-direction: column;
+    }
+
+    section h2{
+        margin-top: 20px;
+    }
+}
+
+a{
+    text-decoration: none;
+    padding: 5px 20px;
+    color: black;
+    margin-left: 20px ;
+    font-size: 25px;
+    transition: all 0.5s ease;
+}
+
+a:hover{
+    opacity: 0.5;
+}

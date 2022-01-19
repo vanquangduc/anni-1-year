@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/heart.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <audio preload="auto" autoplay controls hidden>
+        <source src="./tellurmom.mp3" type="audio/mp3">
+    </audio>
+    <title>My love!!!</title>
+    
+</head>
+<body> 
+        <div id="showcase">
+            <p id="text"></p>
+            <a href="#section1" class="button">next</a>
+        </div>
+    <section id="section1">
+        <div class="container reveal">
+           <h2>3 Lý do khiến anh yêu em</h2>
+           <div class="cards">
+                <div class="text-card">
+                    <h3>Vì anh yêu em</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Vì anh yêu em nhiều lắm</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Vì anh thương em thương em nhiều lắm</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+           </div>
+           <a href="#" class="button">back</a>
+           <a href="#section2" class="button">next</a>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="container reveal">
+           <h2>Title</h2>
+           <div class="cards">
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+           </div>
+           <a href="#section1" class="button">back</a>
+           <a href="#section3" class="button">next</a>
+        </div>
+    </section>
+    <section id="section3">
+        <div class="container reveal">
+           <h2>Title</h2>
+           <div class="cards">
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+           </div>
+           <a href="#section2" class="button">back</a>
+           <a href="#section4" class="button">next</a>
+        </div>
+    </section>
+    <section id="section4">
+        <div class="container reveal">
+           <h2>Title</h2>
+           <div class="cards">
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ullam tempora itaque quae cumque eum debitis architecto distinctio voluptatum dicta excepturi nam, alias labore accusantium iste dignissimos error, rerum sequi!</p>
+                </div>
+           </div>
+           <a href="#section3" class="button">back</a>
+        </div>
+    </section>
+        
+</body>
+<script>
+    window.addEventListener('scroll', reveal);
+    
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+
+        for (var i = 0 ; i < reveals.length; i++){
+            var windowHeight = window.innerHeight
+            var revealTop = reveals[i].getBoundingClientRect().top
+            var revealpoint = 150
+            if(revealTop < windowHeight - revealpoint){
+                reveals[i].classList.add('active')
+            }else{
+                reveals[i].classList.remove('active')
+            }
+        }
+
+    }
+</script>
+</html>
