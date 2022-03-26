@@ -7,6 +7,9 @@ $(document).ready(function(){
         "như vại là chúng ta iu nhao được một năm òi óoo",
         "một năm qua anh vui lắm",
         "cóa em bên cạnh đi chơi với anh",
+        "cóa em iu anh nựaaaa",
+        "cám ơn em dì đã nunn bênnn anhhh",
+        "I LOVE YOU CHU CÀ MOOOO"
     ]
     // Current sentence being processed
     var _PART = 0;
